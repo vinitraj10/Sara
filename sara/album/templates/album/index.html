@@ -1,0 +1,4 @@
+{% for album in albums %}
+<a href="{%url 'album:details' album.id %}">{{album.title}}</a><br>
+{%endfor%}
+<a href="{% url 'album:addAlbum' %}">Add Album</a>

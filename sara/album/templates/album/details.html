@@ -1,0 +1,18 @@
+<img src="{{detailObject.logo.url}}" >
+<h1>{{detailObject.title}}</h1>
+<h2>{{detailObject.artist}}</h2>
+<h3>{{detailObject.genre}}</h3>
+<ul>
+	{% for item in detailObject.song_set.all%}
+	<li><audio controls><source src="{{item.file.url}}" type="audio/mp3"></audio>{{item.song_title}}</li>
+	<form action="{%url 'album:remove_song' detailObject.id item.id %}" method="POST">
+		{%csrf_token%}
+		<input type="submit" value="X">
+	</form>
+	{%endfor%}
+</ul>
+<form action="{% url 'album:remove_album' detailObject.id%}" method="POST">
+	{%csrf_token%}
+	<input type="submit" value="delete">
+</form>
+<a href="{% url 'album:add_song' detailObject.id %}">Add song</a>

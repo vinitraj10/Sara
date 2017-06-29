@@ -1,0 +1,10 @@
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<label>Logo</label><input type="file" name="logo" required id="id_logo" /><br>
+<label>Title</label><input type="text" name="title" value=" " required id="id_title" maxlength="50" /><br>
+<label>Artist</label><input type="text" name="artist" value=" " required id="id_artist" maxlength="100" /><br>
+<label>Genre</label><input type="text" name="genre" value=" " required id="id_genre" maxlength="30" /><br>
+<label>Details</label><textarea name="details" required cols="40" id="id_details" maxlength="200" rows="10">
+ </textarea><br>
+ <input type="submit" value="Add">
+</form>
