@@ -42,14 +42,17 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Sara</a>
+                <a class="navbar-brand page-scroll" href="/">Sara</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/accounts/logout">Logout</a>
+                    <form action="/accounts/logout/" method="POST">
+                        {%csrf_token%}
+                       <button type="submit" class="btn btn-outline">Logout</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -62,8 +65,9 @@
 {%endblock%}
  
 
-<script type="text/javascript" src="{% static 'blog/vendors/jquery/dist/jquery.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'blog/js/main.js' %}"></script>
-<script type="text/javascript" src="{% static 'blog/vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'album/vendors/jquery/dist/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'album/js/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'album/vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
 </body>
 </html>

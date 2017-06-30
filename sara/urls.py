@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',album_views.index,name='index'),
     url(r'^album/',include('sara.album.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 
 ]
 

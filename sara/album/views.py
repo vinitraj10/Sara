@@ -58,9 +58,8 @@ def remove_song(request,album_id,song_id):
 	if request.user.is_authenticated():
 		if request.method=='POST':
 			detailObject=get_object_or_404(Album,pk=album_id)
-			songObject=Song.objects.filter(album=detailObject)
 			deleteObject=Song.objects.get(pk=song_id)
 			deleteObject.delete()
-			return render(request,'album/details.html',{'detailObject':detailObject,'songObject':songObject})
+			return render(request,'album/details.html',{'detailObject':detailObject})
 	else:
 		return render(request,'album/main.html')
