@@ -1,3 +1,73 @@
+{% extends 'album/base.html' %}
+{% block body%}
+
+
+<div class="container">
+    <div class="row profile">
+  
+  </div>
+</div>
+<div class="container">
+<div class="row-content profile">
+  <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img src="{{detailObject.logo.url}}" class="img-responsive" alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            {{detailObject.title}}
+          </div>
+          <div class="profile-usertitle-job">
+            {{detailObject.genre}}
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+         <form action="{% url 'album:remove_album' detailObject.id%}" method="POST">
+			{%csrf_token%}
+			<input type="submit" value="delete" class="btn btn-outline-3 btn-sm">
+			</form> 
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+  
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9">
+            <div class="profile-content">
+				<h5 class="text-center"><a href="{% url 'album:add_song' detailObject.id %}" class="btn btn-outline-2 btn-xl page-scroll">Add Songs Now!</a></h5>
+
+
+
+			<div class="row">
+			{% for item in detailObject.song_set.all%}
+				<div class="col-sm-6">
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    <h4 class="list-group-item-heading">{{item.song_title}}</h4>
+					    <p class="list-group-item-text"><audio controls><source src="{{item.file.url}}" type="audio/mp3"></audio></p>
+					  </a>
+					</div>
+				</div>
+			{%endfor%}
+			</div>
+
+
+
+            </div>
+
+
+    </div>
+</div>
+</div>
+{%endblock%}
+<!--
 <img src="{{detailObject.logo.url}}" >
 <h1>{{detailObject.title}}</h1>
 <h2>{{detailObject.artist}}</h2>
@@ -15,4 +85,4 @@
 	{%csrf_token%}
 	<input type="submit" value="delete">
 </form>
-<a href="{% url 'album:add_song' detailObject.id %}">Add song</a>
+<a href="{% url 'album:add_song' detailObject.id %}">Add song</a>-->

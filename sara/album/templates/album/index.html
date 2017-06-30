@@ -1,4 +1,34 @@
-{% for album in albums %}
+{%extends 'album/base.html' %}
+{%block body%}
+
+<div class="container">
+	<div class="row row-content">
+		<div class="col-md-offset-3 col-md-6">
+			<blockquote> 
+				<h4 class="text-center">Create Albums And Store Your Favourite Songs In It</h4>
+				<h5 class="text-center"><a href="{% url 'album:addAlbum' %}" class="btn btn-outline-2 btn-xl page-scroll">Add Albums Now!</a></h5>
+			</blockquote>
+		</div>
+	</div>
+	<div class="row row-content">
+	{% for album in albums %}
+		<div class="col-xs-12 col-md-4">
+			<div class="thumbnail">
+		      <img src="{{album.logo.url}}" class="img">
+		      <div class="caption">
+		        <h1 class="text-center"><small class="t1">{{album.title}}</small></h1>
+		        <p><h4 class="text-center"><small class="t1">{{album.details}}</small></h4></p>
+		        <h4 class="text-center"><a href="{%url 'album:details' album.id %}" class="btn btn-outline" role="button">View</a>  <a href="#" class="btn btn-outline-3" role="button">Play</a></h4>
+		      </div>
+		    </div>	
+		</div>
+		{%endfor%}
+	</div>
+
+</div>
+<!--{% for album in albums %}
 <a href="{%url 'album:details' album.id %}">{{album.title}}</a><br>
-{%endfor%}
-<a href="{% url 'album:addAlbum' %}">Add Album</a>
+{%endfor%}-->
+
+
+{%endblock%}
