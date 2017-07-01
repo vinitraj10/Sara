@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,16 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1w*nfixjf87+c_u6hkq6p7kx%5!au%t3r^jny072+sa4&&a24^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['*']
-
-DEBUG = False
-try:
-    from .local_settings import *
-except ImportError:
-    pass
 
 # Application definition
 
@@ -99,6 +92,13 @@ WSGI_APPLICATION = 'sara.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -118,10 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
