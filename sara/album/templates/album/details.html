@@ -53,10 +53,9 @@
 					    	<h4 class="text-center">{{item.song_title}}</h4>
 					    </div>
 					    <div class="col-md-offset-4 col-md-2">
-					 <form action="" method="POST" class="col-xs-12">
-            {%csrf_token%}
-            <button type="submit" value="play" class="btn btn-outline-2"><span class="glyphicon glyphicon-play"></span> Play</button>
-          </form>
+		
+            <a href="{{item.file.url}}" value="play" class="btn btn-outline-2"><span class="glyphicon glyphicon-play"></span> Play</a>
+          
           </div>
            <div class="col-md-2">
 					    	<form action="{%url 'album:remove_song' detailObject.id item.id %}" method="POST" class="col-xs-12">

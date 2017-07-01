@@ -28,11 +28,12 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #fdcc52;
+  color:#3f74a8;
 }
 a:hover,
 a:focus {
-  color: #fff;
+  color: #4a8ea5;
+  text-decoration: none;
 }
 
 hr {
@@ -449,6 +450,20 @@ footer ul li a.active {
   padding-right: 0;
   padding-left: 0;
 }
+.btn-fb,
+.btn-fb:hover,
+.btn-fb:focus,
+.btn-fb:active{
+  color:#fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  width:240px;
+  height: 50px;
+}
 .btn-login,
 .btn-login:hover,
 .btn-login:focus,
@@ -492,6 +507,7 @@ footer ul li a.active {
   border-color: #209b5a;
   
 }
+
 
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
