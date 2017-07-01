@@ -34,10 +34,15 @@
 
 })(jQuery); // End of use strict
 // JavaScript
-$('#modal').on('show.bs.modal', function () {
-       $(this).find('.modal-body').css({
-              width:'auto', //probably not needed
-              height:'auto', //probably not needed 
-              'max-height':'100%'
-       });
-});
+window.sr = ScrollReveal({reset:true});
+sr.reveal('.foo-1', { duration: 1500 }, 50);
+sr.reveal('.foo-2', { duration: 1600 }, 50);
+sr.reveal('.foo-3', { duration: 1700 }, 50);
+sr.reveal('.bar-1', { duration: 1800 }, 50);
+sr.reveal('.bar-2', { duration: 1900 }, 50);
+sr.reveal('.bar-3', { duration: 2000 }, 50);
+/* activate sidebar */
+/* activate sidebar */
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
