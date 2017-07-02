@@ -5,4 +5,4 @@ clone this project:-
 <pre>git clone https://github.com/vinitraj10/Sara </pre>
 Please create an issue if you find any bug in it.
 <b>A look over sara:-</b>
-![](https://preview.ibb.co/gDeUKa/Webp_net_gifmaker.gif)
+![](http://i.imgur.com/nwzSvEA.gif)
