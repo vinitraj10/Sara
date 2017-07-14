@@ -331,7 +331,7 @@ section.features .feature-item h3 {
 section.features .feature-item i {
   font-size: 80px;
   background: -webkit-linear-gradient(to left, #3d6b8c, #46a37f);
-  background: linear-gradient(to left,#3d6b8c, #46a37f);
+  background: linear-gradient(to left,#3863ba, #ba3861);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

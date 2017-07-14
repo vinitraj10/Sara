@@ -44,13 +44,14 @@ def remove_album(request,album_id):
 
 def add_song(request,album_id):
 	if request.user.is_authenticated():
+		detailObject=get_object_or_404(Album,pk=album_id)
 		if request.method=="POST":
 			form=SongForm(request.POST,request.FILES)
 			if form.is_valid():
 				post=form.save(commit=False)
 				post.album=Album.objects.get(pk=album_id)
 				post.save()
-				return redirect("/")
+				return redirect('/')
 		else:
 			form=SongForm()
 		return render(request,'album/song.html',{'form':form})

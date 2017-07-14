@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Sara is a web-app to store your favourite songs in a particular album
 
 I made this project so that i can learn django and can have some test of building backend of website.if you find any bug in the project,feel free to create and issue .
@@ -50,3 +51,13 @@ the webiste should be live at http://localhost:8000
 
 
 </div>
+=======
+Sara is a web-app to store your favourite songs in a particular album
+To run the Webapp on Your local machine:-
+<pre>python manage.py runserver</pre>
+clone this project:-
+<pre>git clone https://github.com/vinitraj10/Sara </pre>
+Please create an issue if you find any bug in it.
+<b>A look over sara:-</b>
+![](http://i.imgur.com/nwzSvEA.gif)
+>>>>>>> 3b718772537f5bee66cae9d3943ceecc3ebd88d6
