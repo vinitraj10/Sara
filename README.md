@@ -11,8 +11,9 @@ I made this project so that i can learn django and can have some test of buildin
 
 <div id="id1">
 <h3>Overview</h3>
-![](http://i.imgur.com/nwzSvEA.gif)
 </div>
+
+![](http://i.imgur.com/nwzSvEA.gif)
 
 <div id="id2">
 <h3>Setting Up project:-</h3>
