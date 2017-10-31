@@ -1,7 +1,7 @@
 
 ## Sara is a web-app to store your favourite songs in a particular album
 
-I made this Project so that i can learn django and can have some test of building backend of website.if you find any bug in the project,feel free to create and issue .
+I made this Project so that I can learn django and can have some test of building backend of website.if you find any bug in the project,feel free to create and issue .
 
 <ul>
 	<li><a href="#id1">Overview</a></li>
